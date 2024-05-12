@@ -28,19 +28,17 @@
           <input type="text" id="searchInput" name="q" placeholder="Search For Recipe ...">
           <button type="submit" id="searchButton">Submit</button>
       </form>
-      <script>
-        function handleSubmit() {
-            var query = document.getElementById("searchInput").value.trim();
-            if (query === "") {
-                alert("Please enter a search query");
-                return false; // Prevent form submission
-            } else {
-                var searchDir = "search/" + query.toLowerCase();
-                document.getElementById("searchForm").action = searchDir + "/index.html";
-                return true; // Allow form submission
-            }
-        }
-    </script>
+        <script>
+      document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    const query = document.getElementById('searchQuery').value.trim(); // Get search query
+    if (query) {
+        const encodedQuery = encodeURIComponent(query); // Encode search query
+        const url = `https://ayushthakur210505.github.io/Recipe-Finder/search/${encodedQuery}/index.html`; // Construct URL without query parameter
+        window.location.href = url; // Redirect to the search results page
+    }
+});
+        </script>
     </div>
 
     <div  class="subrecipe"  >
