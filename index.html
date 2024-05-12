@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="Main Page CSS.css" />
+  </head>
+  <body>
+    <header>
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTJv3aoSAH2onQQbLyV0QZihfEEVaPa7OvzJ1hHDwtZbQ4XgXj">
+      <h1>Recipe Finder</h1>
+      
+      <nav>
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="About Us HTML.html">About</a></li>
+          <li><a href="Feedback HTML.html">Feedback</a></li>
+          <li><a href="Contact Us HTML.html">Contact Us</a></li>
+          <li><a href="Sign Up and Login.html">Signup / Login</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="search">
+        <form id="searchForm" onsubmit="return handleSubmit()" autocomplete="off">
+          <input type="text" id="searchInput" name="q" placeholder="Search For Recipe ...">
+          <button type="submit" id="searchButton">Submit</button>
+      </form>
+      <script>
+        function handleSubmit() {
+            var query = document.getElementById("searchInput").value.trim();
+            if (query === "") {
+                alert("Please enter a search query");
+                return false; // Prevent form submission
+            } else {
+                var searchDir = "search/" + query.toLowerCase();
+                document.getElementById("searchForm").action = searchDir + "/index.html";
+                return true; // Allow form submission
+            }
+        }
+    </script>
+    </div>
+
+    <div  class="subrecipe"  >
+      <div class="cuisine">
+        <a><b>Indian</b></a>
+        
+      </div> 
+        
+        <div class="recipes">
+      <article>
+        <img src="https://media.vogue.in/wp-content/uploads/2020/08/chole-bhature-recipe.jpg" />
+        <h2>Chole bhature</h2>
+        <p>Chole Bhature also known as Chana Bhatura is one of the most popular Punjabi dish liked almost all over India. Chole stands for a spiced tangy chickpea curry and Bhatura is a soft and fluffy fried leavened bread. Chola Bhatura always make for a delicious and filling meal. </p>
+        <a href="Chole Bhature HTML.html">Read More</a>
+      </article>
+      <article>
+        <img src="https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken--600x600.jpg" />
+        <h2>Butter Chicken</h2>
+        <p>Butter Chicken (Murgh Makhani) is one of the most popular curries in the world and yet happens to be one of the easiest! No hunting down hard to find ingredients, this chef recipe that makes the most incredible curry sauce.</p>
+        <a href="Butter Chicken HTML.html">Read More</a>
+      </article>
+      <article>
+        <img src="https://indiafoodnetwork.in/wp-content/uploads/2016/11/Optimized-Edit_punjabi-Rajma-2.jpg?width=500&height=300" />
+        <h2>Rajma </h2>
+        <p>Rajma Masala is a delicious gravy made by cooking red kidney beans with onion, tomatoes and basic spices. Rajma Masala goes well with roti, chapati & rice and a good choice of gravy when we run out of veggies. Let us learn to make Rajma Masala Recipe with step by step pictures and video.</p>
+        <a href="Rajma HTML.html">Read More</a>
+      </article>
+  </div>
+</div>
+
+    <div class="subrecipe">
+    <div class="cuisine">
+    <a><b>Chinese</b></a>
+    <br>
+    </div>
+      <div class="recipes">
+       
+        
+        <article>
+          <img src="https://plantbasedonabudget.com/wp-content/uploads/2013/06/Spicy-Tomato-Basil-Pasta-Plant-Based-on-a-Budget-11.jpg" />
+          <h2>Tomato Basil Pasta</h2>
+          <p>A simple and delicious pasta dish made with ripe tomatoes, fresh basil, garlic, olive oil, and Parmesan cheese. This flavorful and comforting meal is perfect for a quick weeknight dinner.</p>
+          <a href="Tomato Basil HTML.html">Read More</a>
+        </article>
+        <article>
+          <img src="https://www.cookingforkeeps.com/wp-content/uploads/2021/05/Healthy-Vegetable-Stir-Fry-Web-13.jpg.webp" />
+          <h2>Vegetable Stir-Fry</h2>
+          <p>A healthy and colorful stir-fry dish featuring a variety of fresh vegetables such as bell peppers, broccoli, carrots, and snap peas, stir-fried with garlic, ginger, and soy sauce. Quick and easy to make, it's a nutritious option for any meal.</p>
+          <a href="Vegetable Stir-Fry HTML.html">Read More</a>
+        </article>
+        <article>
+          <img src="https://static01.nyt.com/images/2017/12/31/dining/28COOKING-CHICKENTENDERS2/28COOKING-CHICKENTENDERS2-mediumThreeByTwo440.jpg?width=1280&quality=75&auto=webp" />
+          <h2>Oven-Baked Chicken Tenders</h2>
+          <p>Crispy and tender chicken tenders coated in a seasoned breadcrumb mixture and baked to perfection in the oven. These homemade chicken tenders are kid-friendly, hassle-free, and much healthier than fried versions.</p>
+          <a href="Oven Baked Chicken HTML.html">Read More</a>
+        </article></div></div>
+
+        <div  class="subrecipe" >
+       
+   <div class="cuisine">
+          <a><b>Italian</b></a>
+          <br>
+          </div>
+          <div class="recipes">
+        <article>
+          <img src="https://media.istockphoto.com/id/840000156/photo/tomato-tortellini-spinach-soup.jpg?s=612x612&w=0&k=20&c=a_CPH4bjW2OAy5DMp4_n0FQF1uI4HtpPCmx9W5ZCqhg=" />
+          <h2>Authentic Tortellini Soup</h2>
+          <p>This simple soup with cheese tortellini, Italian sausage, and chopped fresh spinach is quick-and-easy to prepare. "This soup only takes 30 minutes and is awesome on a cold night," says recipe creator Stephanie.</p>
+          <a href="#">Read More</a>
+        </article>
+        <article  >
+          <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-spaghetti-pasta-picture_500202553.jpg" />
+          <h2>Spaghetti alla Carbonara: the Traditional Italian Recipe</h2>
+          <p>This dish was created in the Lazio region (the area around Rome) in the middle of the 20th century, after World War II. "Carbonara is made with guanciale (cured pork), eggs, Pecorino Romano cheese, spaghetti pasta, and lots of black pepper," says recipe creator ivan zeta. "Try this recipe if you want to make an authentic, creamy carbonara that comes straight from Italy, where I live. Buon appetito!".</p>
+          <a href="Spaghetti alla HTML.html">Read More</a>
+        </article>
+        <article>
+          <img src="https://www.allrecipes.com/thmb/6j_cqDVwC3ArBTj0i17HUfd1jSY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/218723-italiansausageandmushroomlasagnawitbechamelsauce-passano-alr0321-9415-2000-80ad46bc31064c978c4b4612e19413f1.jpg" />
+          <h2>Italian Sausage and Mushroom Lasagna with Bechamel Sauce</h2>
+          <p>The béchamel adds a little something special to this wonderful sausage-mushroom lasagna," says recipe creator Valerie Brunmeier. "I like to use part skim ricotta and mozzarella and low-fat milk to cut some of the fat in this dish. You won't notice the difference.</p>
+          <a href="Mushroom HTML.html">Read More</a>
+        </article></div></div>
+
+
+
+
+  </main>
+    
+  </body>
+</html>
+
